@@ -24,7 +24,7 @@ pipeline {
         // Despliegue
         stage('Desliegue de la Aplicacion'){
             steps{
-                sh 'cp dist/democlase06/* /var/www/html/'
+                sh 'cp dist/democlase06/* /tmp/deploy'
             }
         }
     }
