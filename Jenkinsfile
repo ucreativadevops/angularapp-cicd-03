@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages{
+        // Integracion Continua
         stage('Instalar Dependencias'){
             steps{
                 sh 'npm install'
@@ -17,6 +18,13 @@ pipeline {
         stage('Mostrar Archivos'){
             steps{
                 sh 'ls -la'
+            }
+        }
+
+        // Despliegue
+        stage('Desliegue de la Aplicacion'){
+            steps{
+                sh 'cp dist/democlase06/* /var/www/html/'
             }
         }
     }
