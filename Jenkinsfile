@@ -24,7 +24,7 @@ pipeline {
         // Despliegue
         stage('Desliegue de la Aplicacion'){
             steps{
-                sh 'cp dist/democlase06/* /usr/romell'
+                sh 'cp dist/democlase06/* /usr/ucreativa/romell/'
             }
         }
     }
